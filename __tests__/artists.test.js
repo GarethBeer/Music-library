@@ -25,7 +25,7 @@ describe('/artists', () => {
   });
 
   describe('POST /artists', () => {
-    xit('creates a new artist in the database', done => {
+    it('creates a new artist in the database', done => {
       request(app)
         .post('/artists')
         .send({
@@ -40,6 +40,7 @@ describe('/artists', () => {
             done();
           });
         });
+      done();
     });
   });
 

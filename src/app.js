@@ -1,9 +1,11 @@
 const express = require('express');
 
+const bodyParser = require('body-parser');
+
+const artistControllers = require('./Controllers/artists');
+
 const app = express();
 
-app.get('*', (req, res) => {
-  res.status(200).json({ message: 'Hello World!' });
-});
+app.post('/artists', artistControllers.create);
 
 module.exports = app;
